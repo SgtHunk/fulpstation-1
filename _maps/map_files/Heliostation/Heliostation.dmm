@@ -4267,12 +4267,10 @@
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "akb" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/structure/chair{
 	dir = 4
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "akc" = (
@@ -6280,27 +6278,23 @@
 /turf/open/floor/iron/showroomfloor,
 /area/security/warden)
 "anO" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 1;
 	name = "command blue"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/vault,
 /area/command/bridge)
 "anP" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 1;
 	name = "command blue"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/vault,
 /area/command/bridge)
 "anQ" = (
@@ -7421,10 +7415,8 @@
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
 "apT" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/spawner/randomsnackvend,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
 "apU" = (
@@ -8386,9 +8378,7 @@
 /obj/structure/rack,
 /obj/item/gun/energy/e_gun/dragnet,
 /obj/item/gun/energy/e_gun/dragnet,
-/obj/machinery/status_display/ai{
-	pixel_x = -30
-	},
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/security/armory)
 "arO" = (
@@ -10541,10 +10531,8 @@
 /turf/open/floor/iron/white,
 /area/security/prison)
 "awe" = (
-/obj/machinery/status_display/ai{
-	pixel_x = 30
-	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/command/storage/eva)
 "awf" = (
@@ -11501,9 +11489,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "axQ" = (
-/obj/machinery/status_display/ai{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
 "axR" = (
@@ -11804,9 +11790,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/camera{
 	c_tag = "Command Hallway - Gateway";
 	name = "Hallway Camera"
@@ -11821,6 +11804,7 @@
 	dir = 4;
 	name = "Command blue corner"
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
 "ays" = (
@@ -12761,14 +12745,12 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
 "aAg" = (
-/obj/machinery/status_display/ai{
-	pixel_x = -32
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 8;
 	name = "command blue"
 	},
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/command/nuke_storage)
 "aAh" = (
@@ -13064,14 +13046,12 @@
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
 "aAK" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 9;
 	name = "command blue"
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/vault,
 /area/command/heads_quarters/captain)
 "aAL" = (
@@ -14418,12 +14398,10 @@
 /turf/open/floor/iron,
 /area/security/courtroom)
 "aDy" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/security/courtroom)
 "aDz" = (
@@ -27660,10 +27638,8 @@
 /area/medical/medbay/lobby)
 "biW" = (
 /obj/structure/table,
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/medical/medbay/lobby)
 "biX" = (
@@ -30082,9 +30058,6 @@
 /turf/open/floor/iron,
 /area/security/checkpoint/customs)
 "boL" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 1;
@@ -30092,6 +30065,7 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/security/checkpoint/customs)
 "boM" = (
@@ -31051,7 +31025,6 @@
 /area/commons/lounge)
 "bqG" = (
 /obj/machinery/vending/games,
-/obj/machinery/light/directional/north,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/commons/lounge)
@@ -31069,7 +31042,6 @@
 /area/commons/lounge)
 "bqK" = (
 /obj/machinery/lapvend,
-/obj/machinery/light/directional/north,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/commons/lounge)
@@ -31085,7 +31057,6 @@
 /area/commons/lounge)
 "bqN" = (
 /obj/effect/spawner/randomcolavend,
-/obj/machinery/light/directional/north,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/commons/lounge)
@@ -31873,10 +31844,8 @@
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bsp" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bsq" = (
@@ -33106,9 +33075,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "bwf" = (
-/obj/machinery/status_display/ai{
-	pixel_y = -30
-	},
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bwg" = (
@@ -35590,7 +35557,6 @@
 /area/service/bar)
 "bBO" = (
 /obj/effect/spawner/randomsnackvend,
-/obj/machinery/light/directional/north,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/commons/lounge)
@@ -44969,9 +44935,6 @@
 "bYH" = (
 /obj/structure/cable,
 /obj/machinery/vending/coffee,
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	name = "engineering yellow"
@@ -44981,6 +44944,7 @@
 	dir = 1;
 	name = "engineering yellow"
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "bYI" = (
@@ -46624,9 +46588,7 @@
 /obj/structure/rack,
 /obj/item/electronics/firelock,
 /obj/item/electronics/firelock,
-/obj/machinery/status_display/ai{
-	pixel_x = -30
-	},
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/iron/dark,
 /area/engineering/storage/tech)
 "ccl" = (
@@ -49167,9 +49129,6 @@
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "chU" = (
-/obj/machinery/status_display/ai{
-	pixel_x = 32
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
@@ -49177,6 +49136,7 @@
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/iron,
 /area/command/heads_quarters/ce)
 "chV" = (
@@ -51750,9 +51710,6 @@
 /area/science/research)
 "cnl" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/status_display/ai{
-	pixel_y = -30
-	},
 /obj/machinery/camera{
 	c_tag = "Research Director";
 	dir = 1;
@@ -51767,6 +51724,7 @@
 	dir = 10;
 	name = "research purple"
 	},
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
 "cnm" = (
@@ -54592,14 +54550,12 @@
 /area/engineering/engine_smes)
 "cts" = (
 /obj/machinery/modular_computer/console/preset/engineering,
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 1;
 	name = "engineering yellow"
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/engineering/engine_smes)
 "ctt" = (
@@ -59546,9 +59502,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/obj/machinery/status_display/ai{
-	pixel_y = -30
-	},
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/engine,
 /area/engineering/main)
 "cFa" = (
@@ -62224,12 +62178,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/status_display/ai{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/engine,
 /area/engineering/main)
 "cKD" = (
@@ -64889,9 +64841,7 @@
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRp" = (
 /obj/structure/cable,
-/obj/machinery/status_display/ai{
-	pixel_y = -32
-	},
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRq" = (
@@ -64904,9 +64854,6 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRr" = (
-/obj/machinery/status_display/ai{
-	pixel_y = -32
-	},
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Main Airlock";
 	dir = 1;
@@ -64914,6 +64861,7 @@
 	network = list("minisat")
 	},
 /obj/structure/cable,
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRs" = (
@@ -64967,19 +64915,15 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/aisat/service)
 "cRA" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRB" = (
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cRC" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRD" = (
@@ -64993,15 +64937,13 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRE" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Antechamber";
 	name = "AI motion-sensitive security camera";
 	network = list("minisat")
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRF" = (
@@ -65029,10 +64971,8 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRK" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/porta_turret/ai,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRL" = (
@@ -65040,15 +64980,13 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRM" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/porta_turret/ai,
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Teleporter Antechamber";
 	name = "AI motion-sensitive security camera";
 	network = list("minisat")
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "cRN" = (
@@ -65161,15 +65099,13 @@
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cSf" = (
 /obj/structure/cable,
-/obj/machinery/status_display/ai{
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cSg" = (
@@ -65361,11 +65297,9 @@
 /area/ai_monitored/turret_protected/aisat/hallway)
 "cSJ" = (
 /obj/machinery/porta_turret/ai,
-/obj/machinery/status_display/ai{
-	pixel_x = 32
-	},
 /obj/machinery/light/small/directional/east,
 /obj/machinery/light/small/directional/east,
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/hallway)
 "cSK" = (
@@ -65405,9 +65339,6 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "cSQ" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/portable_atmospherics/scrubber,
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Storage";
@@ -65415,6 +65346,7 @@
 	network = list("minisat")
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cSR" = (
@@ -65490,9 +65422,6 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "cSZ" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Service Bay";
 	name = "AI motion-sensitive security camera";
@@ -65500,14 +65429,13 @@
 	},
 /obj/machinery/recharge_station,
 /obj/machinery/light/directional/west,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "cTa" = (
 /obj/machinery/porta_turret/ai,
-/obj/machinery/status_display/ai{
-	pixel_x = -32
-	},
 /obj/machinery/light/small/directional/west,
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/hallway)
 "cTb" = (
@@ -65940,12 +65868,10 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUl" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/components/unary/tank/air{
 	dir = 8
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUp" = (
@@ -65991,9 +65917,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
 "cUw" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "cUx" = (
@@ -66044,10 +65968,8 @@
 	id = "aisolar";
 	name = "AI Solar Control"
 	},
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/structure/cable,
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron/dark,
 /area/maintenance/solars)
 "cUF" = (
@@ -66499,15 +66421,13 @@
 /turf/open/floor/circuit,
 /area/maintenance/solars)
 "cVE" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Solars Airlock W";
 	dir = 8;
 	name = "AI motion-sensitive security camera";
 	network = list("minisat")
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/space/basic,
 /area/space)
 "cVF" = (
@@ -66515,15 +66435,13 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "cVG" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
 /obj/machinery/camera/motion{
 	c_tag = "Minisat Solars Airlock E";
 	dir = 4;
 	name = "AI motion-sensitive security camera";
 	network = list("minisat")
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/space/basic,
 /area/space)
 "cVH" = (
@@ -66826,9 +66744,7 @@
 "cWo" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/obj/machinery/status_display/ai{
-	pixel_x = -32
-	},
+/obj/machinery/status_display/ai/directional/west,
 /turf/open/space/basic,
 /area/maintenance/solars)
 "cWp" = (
@@ -67032,9 +66948,7 @@
 "cWU" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/obj/machinery/status_display/ai{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/ai/directional/east,
 /turf/open/space/basic,
 /area/maintenance/solars)
 "cWV" = (
@@ -68096,9 +68010,7 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "eqU" = (
-/obj/machinery/status_display/ai{
-	pixel_y = 32
-	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/space/basic,
 /area/space)
 "erc" = (
