@@ -3331,15 +3331,12 @@
 /area/security/prison)
 "aim" = (
 /obj/structure/closet/secure_closet/brig,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 4;
 	name = "security red"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/security/prison)
 "ain" = (
@@ -4207,10 +4204,6 @@
 	name = "Bridge Camera";
 	network = list("ss13","command")
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 5;
@@ -4231,6 +4224,7 @@
 	name = "Command blue corner"
 	},
 /obj/machinery/light/directional/north,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/vault,
 /area/command/bridge)
 "aka" = (
@@ -5832,15 +5826,12 @@
 /turf/open/floor/iron,
 /area/security/brig)
 "anc" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 4;
 	name = "security red"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/security/brig)
 "and" = (
@@ -6623,10 +6614,7 @@
 /turf/open/floor/iron/showroomfloor,
 /area/security/brig/upper)
 "aor" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "aos" = (
@@ -7987,10 +7975,7 @@
 /turf/open/floor/carpet/red,
 /area/command/heads_quarters/hop)
 "aqZ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/carpet/red,
 /area/command/heads_quarters/hop)
 "ara" = (
@@ -9041,15 +9026,12 @@
 /obj/item/storage/toolbox/emergency,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/storage/toolbox/electrical,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 8;
 	name = "command blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/ai_monitored/command/storage/eva)
 "atl" = (
@@ -10045,15 +10027,12 @@
 /area/security/prison)
 "avg" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 4;
 	name = "command blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/command/bridge)
 "avh" = (
@@ -13512,15 +13491,12 @@
 "aBK" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/regular,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 8;
 	name = "command blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/command/gateway)
 "aBL" = (
@@ -13805,15 +13781,12 @@
 /turf/open/floor/iron,
 /area/security/brig)
 "aCo" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 4;
 	name = "command blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
 "aCp" = (
@@ -14762,11 +14735,8 @@
 /turf/open/floor/iron/dark,
 /area/command/gateway)
 "aEA" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/landmark/start/hangover,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "aEB" = (
@@ -15610,10 +15580,7 @@
 /turf/open/floor/iron,
 /area/maintenance/port/fore)
 "aGl" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/security/courtroom)
 "aGm" = (
@@ -17766,14 +17733,11 @@
 "aLT" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/green{
 	dir = 6
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/white,
 /area/medical/virology)
 "aLU" = (
@@ -19226,15 +19190,12 @@
 "aPo" = (
 /obj/structure/bed,
 /obj/item/bedsheet/purple,
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 1;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron{
 	initial_gas_mix = "n2=104;TEMP=293.15"
 	},
@@ -19819,14 +19780,11 @@
 /turf/open/floor/carpet,
 /area/service/lawoffice)
 "aQr" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold/supply/hidden/layer4{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
 "aQs" = (
@@ -19986,10 +19944,6 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "aQT" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 4
 	},
@@ -20000,6 +19954,7 @@
 	color = "#73c2fb";
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "aQU" = (
@@ -22286,16 +22241,13 @@
 /area/medical/surgery)
 "aVT" = (
 /obj/machinery/rnd/production/techfab/department/medical,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/blue/end{
 	color = "#73c2fb";
 	name = "medical blue"
 	},
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/storage)
 "aVU" = (
@@ -23217,15 +23169,12 @@
 	name = "Cryogenics Camera";
 	network = list("ss13","medbay")
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/blue/end{
 	color = "#73c2fb";
 	dir = 1;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "aYj" = (
@@ -24075,16 +24024,13 @@
 /turf/open/floor/iron/dark,
 /area/medical/surgery)
 "bak" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 8;
 	name = "medical blue"
 	},
 /obj/machinery/light/directional/west,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "bal" = (
@@ -24505,10 +24451,6 @@
 	dir = 1;
 	name = "emergency shower"
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/machinery/camera{
 	c_tag = "Stasis S";
 	dir = 1;
@@ -24520,6 +24462,7 @@
 	dir = 10;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/treatment_center)
 "bbs" = (
@@ -24876,11 +24819,8 @@
 /turf/open/floor/carpet/purple,
 /area/medical/psychology)
 "bcq" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/light/small/directional/east,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/white,
 /area/commons/dorms)
 "bcr" = (
@@ -26084,10 +26024,7 @@
 "bfA" = (
 /obj/structure/table,
 /obj/item/clothing/mask/gas,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bfB" = (
@@ -26396,14 +26333,11 @@
 /turf/open/floor/iron/white,
 /area/medical/psychology)
 "bgn" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bgo" = (
@@ -26785,15 +26719,12 @@
 	name = "Morgue Camera";
 	network = list("ss13","medbay")
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 1;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/dark,
 /area/medical/morgue)
 "bhu" = (
@@ -27137,10 +27068,7 @@
 "bij" = (
 /obj/structure/table,
 /obj/item/storage/crayons,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/commons/lounge)
 "bik" = (
@@ -28324,13 +28252,11 @@
 /turf/open/floor/iron/white,
 /area/commons/toilet)
 "bll" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
 /obj/effect/turf_decal/siding/thinplating/light{
 	dir = 8
 	},
 /obj/machinery/light/small/directional/west,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/commons/toilet)
 "blm" = (
@@ -29234,15 +29160,12 @@
 /obj/item/assembly/igniter,
 /obj/item/assembly/signaler,
 /obj/structure/disposalpipe/segment,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 4;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/commons/storage/tools)
 "bnn" = (
@@ -29337,10 +29260,6 @@
 /turf/open/floor/iron/white,
 /area/medical/pharmacy)
 "bnw" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	dir = 8;
@@ -29353,6 +29272,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/security/checkpoint/customs)
 "bnx" = (
@@ -29692,16 +29612,13 @@
 /area/commons/storage/tools)
 "bop" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 5;
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/east,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/construction/mining/aux_base)
 "boq" = (
@@ -30228,9 +30145,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "bpC" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/commons/lounge)
 "bpD" = (
@@ -30297,13 +30212,10 @@
 /turf/open/floor/iron,
 /area/maintenance/starboard/fore)
 "bpM" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/purple{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/maintenance/starboard/fore)
 "bpN" = (
@@ -31023,15 +30935,12 @@
 /turf/open/floor/iron/dark,
 /area/medical/morgue)
 "brh" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 10;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/dark,
 /area/medical/morgue)
 "bri" = (
@@ -31160,16 +31069,13 @@
 /area/medical/morgue)
 "bru" = (
 /obj/item/kirbyplants/random,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 10;
 	name = "medical blue"
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
 "brv" = (
@@ -31231,14 +31137,11 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/pharmacy)
 "brD" = (
@@ -31859,10 +31762,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "bsX" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "bsY" = (
@@ -32011,10 +31911,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "btt" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "btu" = (
@@ -33269,10 +33166,7 @@
 /turf/open/floor/iron/white,
 /area/medical/surgery)
 "bxj" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bxk" = (
@@ -33707,38 +33601,29 @@
 	name = "Neglected Office Plant"
 	},
 /obj/effect/decal/remains/human,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/commons/vacant_room/office)
 "byj" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 5;
 	name = "security red"
 	},
 /obj/machinery/firealarm/directional/north,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/security/checkpoint)
 "byk" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/portable_atmospherics/canister/water_vapor,
 /obj/effect/turf_decal/siding/purple{
 	dir = 5
 	},
 /obj/machinery/light/directional/east,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/service/janitor)
 "byl" = (
@@ -34029,11 +33914,8 @@
 /area/service/library)
 "byV" = (
 /obj/item/kirbyplants/random,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/light/directional/north,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/service/library)
 "byW" = (
@@ -34117,15 +33999,12 @@
 	pixel_y = 25;
 	req_access_txt = "29"
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 9;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/robotics/lab)
 "bzg" = (
@@ -34522,9 +34401,6 @@
 /turf/open/floor/iron,
 /area/service/janitor)
 "bAe" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -27
-	},
 /obj/machinery/vending/hydronutrients,
 /obj/effect/turf_decal/siding/green{
 	dir = 10
@@ -34532,6 +34408,7 @@
 /obj/effect/turf_decal/siding/green/corner{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/service/hydroponics)
 "bAf" = (
@@ -34610,14 +34487,11 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bAs" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/turf_decal/siding/wideplating{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bAt" = (
@@ -35003,11 +34877,8 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/landmark/start/assistant,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bBi" = (
@@ -35443,15 +35314,12 @@
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high/plus,
 /obj/item/toy/figure/roboticist,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 10;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/science/robotics/mechbay)
 "bCl" = (
@@ -37073,20 +36941,11 @@
 /turf/open/floor/carpet,
 /area/hallway/secondary/entry)
 "bGt" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -35
-	},
-/obj/machinery/button/door{
-	id = "kitchenhydro";
-	name = "Service Shutter Control";
-	pixel_x = -23;
-	req_access_txt = "28"
-	},
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/effect/turf_decal/siding/thinplating/light{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/cafeteria,
 /area/service/kitchen)
 "bGu" = (
@@ -37178,10 +37037,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/wood,
 /area/service/library)
 "bGF" = (
@@ -38095,6 +37951,12 @@
 	dir = 10
 	},
 /obj/machinery/light/directional/west,
+/obj/machinery/button/door{
+	id = "kitchenhydro";
+	name = "Service Shutter Control";
+	pixel_x = -23;
+	req_access_txt = "28"
+	},
 /turf/open/floor/iron/cafeteria,
 /area/service/kitchen)
 "bIT" = (
@@ -38549,11 +38411,8 @@
 "bJY" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/coffee,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bJZ" = (
@@ -39598,15 +39457,12 @@
 /turf/closed/wall,
 /area/science/robotics/lab)
 "bMH" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 8;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/research)
 "bMJ" = (
@@ -39635,10 +39491,7 @@
 /turf/open/floor/wood,
 /area/service/bar)
 "bMM" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "bMN" = (
@@ -39717,10 +39570,7 @@
 	dir = 8;
 	name = "Game Room Camera"
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/carpet/green,
 /area/service/library)
 "bMV" = (
@@ -40057,10 +39907,7 @@
 	pixel_y = 15
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood{
 	icon_state = "wood-broken3"
 	},
@@ -40185,10 +40032,7 @@
 /area/service/library)
 "bOk" = (
 /obj/structure/chair/comfy,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/service/bar)
 "bOl" = (
@@ -40372,15 +40216,12 @@
 /area/maintenance/department/cargo)
 "bOJ" = (
 /obj/structure/chair,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 8;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/research)
 "bOK" = (
@@ -41945,10 +41786,7 @@
 /turf/open/floor/wood,
 /area/service/theater)
 "bSz" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bSA" = (
@@ -42508,15 +42346,12 @@
 /obj/item/geiger_counter,
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/gloves/color/latex,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 6;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/dark,
 /area/engineering/gravity_generator)
 "bTR" = (
@@ -44369,11 +44204,8 @@
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bYe" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bYf" = (
@@ -45703,11 +45535,8 @@
 /obj/item/stock_parts/cell/high/plus,
 /obj/item/stock_parts/cell/high/plus,
 /obj/item/t_scanner,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/item/clothing/glasses/meson,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark,
 /area/engineering/storage/tech)
 "cbj" = (
@@ -46090,16 +45919,13 @@
 /turf/open/floor/iron/dark,
 /area/science/mixing)
 "cbQ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/machinery/research/explosive_compressor,
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 1;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/dark,
 /area/science/mixing)
 "cbR" = (
@@ -46740,15 +46566,12 @@
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
 "cdq" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 4;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/white,
 /area/science/research)
 "cdr" = (
@@ -47272,10 +47095,7 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "cep" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "ceq" = (
@@ -48820,10 +48640,6 @@
 "chV" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_y = 23
@@ -48833,6 +48649,7 @@
 	dir = 9;
 	name = "security red"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/security/checkpoint/supply)
 "chX" = (
@@ -48913,10 +48730,7 @@
 /obj/effect/turf_decal/siding/brown{
 	dir = 9
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
 "cig" = (
@@ -49438,15 +49252,12 @@
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 6;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
 "cju" = (
@@ -49979,15 +49790,12 @@
 /turf/open/floor/iron,
 /area/command/heads_quarters/ce)
 "cku" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 8;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "ckv" = (
@@ -50881,12 +50689,9 @@
 /turf/open/floor/iron/white,
 /area/science/research)
 "cmf" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -35
-	},
 /obj/machinery/rnd/bepis,
 /obj/effect/turf_decal/stripes/box,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/cargo/sorting)
 "cmg" = (
@@ -52148,15 +51953,12 @@
 /area/engineering/lobby)
 "coI" = (
 /obj/structure/closet/l3closet/scientist,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 8;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/misc_lab)
 "coJ" = (
@@ -52817,10 +52619,6 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "cqp" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
 	dir = 10
 	},
@@ -52830,6 +52628,7 @@
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/north,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "cqq" = (
@@ -54646,10 +54445,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/science/xenobiology)
 "cuC" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/newscaster{
 	pixel_x = 38;
 	pixel_y = 2
@@ -54667,6 +54462,7 @@
 	name = "security red"
 	},
 /obj/effect/landmark/start/depsec/engineering,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/security/checkpoint/engineering)
 "cuD" = (
@@ -55678,16 +55474,13 @@
 /turf/open/floor/circuit/telecomms,
 /area/science/xenobiology)
 "cwY" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 8;
 	name = "research purple"
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/general/visible,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/xenobiology)
 "cwZ" = (
@@ -55810,10 +55603,6 @@
 /area/cargo/office)
 "cxp" = (
 /obj/structure/closet/radiation,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
@@ -55822,6 +55611,7 @@
 	dir = 10;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/engineering/engine_smes)
 "cxq" = (
@@ -55947,10 +55737,6 @@
 /area/engineering/engine_smes)
 "cxz" = (
 /obj/structure/closet/radiation,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 10
 	},
@@ -55959,6 +55745,7 @@
 	dir = 6;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/engineering/engine_smes)
 "cxB" = (
@@ -56352,16 +56139,13 @@
 /turf/open/floor/iron,
 /area/cargo/office)
 "cyz" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 8;
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/west,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "cyA" = (
@@ -57170,15 +56954,12 @@
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
 /obj/item/assembly/signaler,
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 1;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/white,
 /area/science/mixing)
 "cAr" = (
@@ -59493,10 +59274,6 @@
 /area/engineering/atmos/upper)
 "cFT" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 4;
@@ -59505,6 +59282,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/orange/visible{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/maintenance/disposal/incinerator)
 "cFU" = (
@@ -60976,13 +60754,10 @@
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
 "cIQ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/effect/turf_decal/siding/brown{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/cargo/miningoffice)
 "cIR" = (
@@ -62154,16 +61929,13 @@
 /turf/open/floor/engine,
 /area/engineering/main)
 "cLz" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 6;
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/engine,
 /area/engineering/main)
 "cLA" = (
@@ -63966,10 +63738,7 @@
 "cQc" = (
 /obj/structure/rack,
 /obj/item/tank/jetpack,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/dark,
 /area/maintenance/department/science/xenobiology)
 "cQd" = (
@@ -64052,10 +63821,7 @@
 "cQi" = (
 /obj/structure/rack,
 /obj/item/tank/jetpack,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark,
 /area/maintenance/department/science/xenobiology)
 "cQj" = (
@@ -64596,10 +64362,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "cRN" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cRO" = (
@@ -64972,10 +64735,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "cSU" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = 24
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "cSV" = (
@@ -65113,12 +64873,9 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/donkpockets,
 /obj/effect/spawner/lootdrop/donkpockets,
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = 24
-	},
 /obj/item/radio/off,
 /obj/item/screwdriver,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cTn" = (
@@ -65630,14 +65387,11 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUO" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = 24
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUP" = (
@@ -65889,14 +65643,11 @@
 /turf/open/floor/circuit,
 /area/maintenance/solars)
 "cVq" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/dark,
 /area/maintenance/solars)
 "cVs" = (
@@ -66575,10 +66326,6 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "cXc" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
 /obj/machinery/camera{
 	c_tag = "Toxins Hallway";
 	dir = 1;
@@ -66591,6 +66338,7 @@
 	dir = 10;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron/white,
 /area/science/mixing)
 "cXd" = (
@@ -67321,10 +67069,6 @@
 /turf/open/floor/iron,
 /area/security/brig)
 "dEZ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -67336,6 +67080,7 @@
 	dir = 1;
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "dGr" = (
@@ -68841,10 +68586,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "hEL" = (
@@ -68981,14 +68723,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/science/research)
 "hVV" = (
@@ -69811,10 +69550,7 @@
 	},
 /area/cargo/warehouse)
 "jUy" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "jVy" = (
@@ -69875,11 +69611,8 @@
 /turf/open/floor/plating,
 /area/maintenance/disposal/incinerator)
 "khA" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/effect/turf_decal/siding/wideplating,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "khH" = (
@@ -71222,13 +70955,11 @@
 /turf/open/floor/plating,
 /area/engineering/atmos)
 "nlF" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -30
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	name = "engineering yellow"
 	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "nnm" = (
@@ -71313,10 +71044,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/bar,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/service/bar)
 "nvG" = (
@@ -71609,15 +71337,12 @@
 /turf/open/floor/vault,
 /area/command/bridge)
 "nTn" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 1;
 	name = "research purple"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/white,
 /area/science/research)
 "nUC" = (
@@ -71731,10 +71456,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "odr" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "odO" = (
@@ -71931,11 +71653,8 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "oLK" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_y = -27
-	},
 /obj/machinery/status_display/evac/directional/north,
+/obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat_interior)
 "oNL" = (
@@ -72554,10 +72273,7 @@
 /turf/open/floor/iron,
 /area/security/prison)
 "qGF" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "qIL" = (
@@ -73667,10 +73383,7 @@
 /turf/open/floor/iron,
 /area/security/office)
 "tmp" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = -24
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "tnq" = (
@@ -75085,16 +74798,13 @@
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "wVc" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 1;
 	name = "engineering yellow"
 	},
 /obj/machinery/light/directional/north,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "wVl" = (
@@ -75467,15 +75177,12 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "xRW" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_y = 27
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 1;
 	name = "medical blue"
 	},
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "xTF" = (
