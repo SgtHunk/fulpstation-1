@@ -3513,15 +3513,13 @@
 /turf/open/floor/iron,
 /area/security/prison)
 "aiK" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/brown{
 	color = "#FF6700";
 	dir = 1;
 	name = "prison orange"
 	},
 /obj/effect/spawner/randomcolavend,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/security/prison)
 "aiL" = (
@@ -3758,14 +3756,12 @@
 /obj/structure/chair{
 	dir = 1
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/landmark/start/security_officer,
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	name = "security red"
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/security/office)
 "ajj" = (
@@ -4472,12 +4468,10 @@
 /turf/open/floor/iron,
 /area/security/prison/safe)
 "akA" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/structure/chair{
 	dir = 8
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "akE" = (
@@ -5366,15 +5360,13 @@
 /area/maintenance/department/security/upper)
 "ame" = (
 /obj/structure/closet/secure_closet/brig,
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 5;
 	name = "security red"
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/security/prison)
 "amf" = (
@@ -6940,15 +6932,13 @@
 /area/security/warden)
 "aoW" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/status_display/evac{
-	pixel_x = -33
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 8;
 	name = "security red"
 	},
 /obj/machinery/light/directional/west,
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/security/brig)
 "aoY" = (
@@ -11395,9 +11385,7 @@
 /turf/open/floor/iron/dark,
 /area/security/brig)
 "axG" = (
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "axH" = (
@@ -12407,13 +12395,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/landmark/event_spawn,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
 "azy" = (
@@ -12587,9 +12573,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "azO" = (
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
 "azP" = (
@@ -13084,9 +13068,7 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
 "aAP" = (
-/obj/machinery/status_display/evac{
-	pixel_x = -32
-	},
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "aAQ" = (
@@ -14446,12 +14428,10 @@
 /turf/open/floor/iron,
 /area/security/courtroom)
 "aDC" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden/layer4{
 	dir = 10
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/security/courtroom)
 "aDD" = (
@@ -15510,13 +15490,11 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#4169E1";
 	name = "command blue"
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
 "aFP" = (
@@ -16041,9 +16019,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "aHf" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "aHg" = (
@@ -16175,14 +16151,12 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/command/nuke_storage)
 "aHw" = (
-/obj/machinery/status_display/evac{
-	pixel_x = -32
-	},
 /obj/machinery/camera{
 	c_tag = "Fore Primary Hallway - Entrance";
 	dir = 4;
 	name = "Hallway Camera"
 	},
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "aHx" = (
@@ -19449,14 +19423,12 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "aPz" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	dir = 1;
 	name = "medical blue"
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "aPA" = (
@@ -26600,14 +26572,12 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bgu" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
 	name = "medical blue"
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bgv" = (
@@ -27019,9 +26989,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/siding/blue{
 	color = "#73c2fb";
@@ -27029,6 +26996,7 @@
 	name = "medical blue"
 	},
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bhB" = (
@@ -27567,10 +27535,8 @@
 "biR" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/dark,
 /area/medical/medbay/lobby)
 "biS" = (
@@ -30220,11 +30186,9 @@
 /area/hallway/secondary/entry)
 "bpf" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/landmark/start/hangover/closet,
 /obj/machinery/light/directional/south,
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bpg" = (
@@ -31015,12 +30979,10 @@
 	dir = 4;
 	name = "Common Room Camera"
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/machinery/modular_computer/console/preset/civilian{
 	dir = 1
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/commons/lounge)
 "bqG" = (
@@ -31666,15 +31628,13 @@
 /turf/open/floor/carpet,
 /area/service/chapel/main)
 "brZ" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/camera{
 	c_tag = "Arrivals to Hallway";
 	name = "Hallway Camera"
 	},
 /obj/machinery/bluespace_vendor/east,
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bsa" = (
@@ -32106,9 +32066,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "btd" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bte" = (
@@ -32198,9 +32156,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "btq" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "btr" = (
@@ -32730,15 +32686,13 @@
 /area/hallway/secondary/exit/departure_lounge)
 "bvh" = (
 /obj/structure/closet/firecloset,
-/obj/machinery/status_display/evac{
-	pixel_x = 30
-	},
 /obj/machinery/camera{
 	c_tag = "EVAC NE";
 	dir = 8;
 	name = "Hallway Camera"
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bvi" = (
@@ -32922,10 +32876,8 @@
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "bvO" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/machinery/light/directional/south,
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "bvP" = (
@@ -33042,17 +32994,13 @@
 /area/hallway/primary/port)
 "bwa" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/status_display/evac{
-	pixel_x = 30
-	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bwc" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/machinery/light/directional/south,
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bwd" = (
@@ -33129,16 +33077,12 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bwn" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/structure/cable,
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bwo" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bwp" = (
@@ -33212,9 +33156,6 @@
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "bwy" = (
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/turf_decal/tile/purple{
 	color = "#990099";
 	name = "Science purple corner"
@@ -33224,6 +33165,7 @@
 	dir = 8;
 	name = "Science purple corner"
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "bwz" = (
@@ -33682,10 +33624,8 @@
 /turf/closed/wall/r_wall,
 /area/maintenance/department/science)
 "bxE" = (
-/obj/machinery/status_display/evac{
-	pixel_x = -32
-	},
 /obj/machinery/door/firedoor,
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "bxF" = (
@@ -34378,15 +34318,13 @@
 /area/science/robotics/lab)
 "bzh" = (
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 1;
 	name = "research purple"
 	},
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/white,
 /area/science/robotics/lab)
 "bzi" = (
@@ -34597,11 +34535,9 @@
 /area/hallway/secondary/entry)
 "bzF" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/landmark/start/hangover/closet,
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bzG" = (
@@ -35131,9 +35067,6 @@
 /turf/open/floor/iron,
 /area/science/robotics/mechbay)
 "bAW" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/structure/table/glass,
 /obj/item/book/manual/wiki/research_and_development,
 /obj/effect/turf_decal/siding/purple{
@@ -35141,6 +35074,7 @@
 	dir = 9;
 	name = "research purple"
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/white,
 /area/science/lab)
 "bAX" = (
@@ -37429,9 +37363,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/status_display/evac{
-	pixel_x = -32
-	},
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bGD" = (
@@ -37545,9 +37477,7 @@
 /turf/open/floor/iron/cafeteria,
 /area/service/kitchen)
 "bGR" = (
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "bGS" = (
@@ -41587,9 +41517,7 @@
 /turf/closed/wall,
 /area/hallway/secondary/service)
 "bQS" = (
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bQT" = (
@@ -43015,9 +42943,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/structure/cable,
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
@@ -43029,6 +42954,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron/white,
 /area/science/research)
 "bUj" = (
@@ -44949,9 +44875,6 @@
 /area/engineering/lobby)
 "bYI" = (
 /obj/structure/cable,
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	name = "engineering yellow"
@@ -44963,6 +44886,7 @@
 	},
 /obj/effect/spawner/randomcolavend,
 /obj/machinery/light/directional/north,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "bYJ" = (
@@ -49224,10 +49148,8 @@
 /turf/open/floor/plating,
 /area/cargo/sorting)
 "cie" = (
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
 "cif" = (
@@ -50674,9 +50596,6 @@
 /turf/open/floor/iron/white,
 /area/science/research)
 "clb" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/purple{
 	color = "#990099";
 	dir = 1;
@@ -50688,6 +50607,7 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/white,
 /area/science/research)
 "clc" = (
@@ -50971,9 +50891,6 @@
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "clG" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
@@ -50985,6 +50902,7 @@
 	dir = 1;
 	name = "engineering yellow"
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/engineering/lobby)
 "clH" = (
@@ -52210,9 +52128,6 @@
 /turf/open/floor/iron,
 /area/cargo/storage)
 "com" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=2";
 	freq = 1400;
@@ -52227,6 +52142,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/cargo/storage)
 "coo" = (
@@ -53595,14 +53511,12 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "crq" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/effect/turf_decal/siding/yellow{
 	color = "#FFD700";
 	dir = 1;
 	name = "engineering yellow"
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "crt" = (
@@ -54612,9 +54526,7 @@
 	},
 /obj/effect/turf_decal/bot_red,
 /obj/structure/cable,
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/dark,
 /area/engineering/engine_smes)
 "ctz" = (
@@ -59663,13 +59575,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = -30
-	},
 /obj/effect/turf_decal/bot_white,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
 	},
+/obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/engine,
 /area/engineering/main)
 "cFx" = (
@@ -63333,12 +63243,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden{
 	dir = 4
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/engine,
 /area/engineering/main)
 "cNA" = (
@@ -65307,9 +65215,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cSL" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cSM" = (
@@ -65490,10 +65396,8 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
 "cTj" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/recharge_station,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/service)
 "cTk" = (
@@ -65663,10 +65567,8 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/foyer)
 "cTF" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/portable_atmospherics/scrubber,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cTG" = (
@@ -65810,10 +65712,8 @@
 /turf/open/floor/iron/dark,
 /area/maintenance/solars)
 "cUd" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/holopad/secure,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/circuit,
 /area/maintenance/solars)
 "cUe" = (
@@ -65928,9 +65828,7 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
 "cUy" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "cUz" = (
@@ -66057,10 +65955,8 @@
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUP" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/machinery/holopad/secure,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/atmos)
 "cUQ" = (
@@ -72367,13 +72263,11 @@
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
 "oLK" = (
-/obj/machinery/status_display/evac{
-	pixel_y = 30
-	},
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_y = -27
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat_interior)
 "oNL" = (
@@ -74786,15 +74680,13 @@
 /area/maintenance/department/science/xenobiology)
 "uWs" = (
 /obj/structure/closet/secure_closet/brig,
-/obj/machinery/status_display/evac{
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/siding/red{
 	color = "#FF0000";
 	dir = 6;
 	name = "security red"
 	},
 /obj/machinery/light/directional/east,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron,
 /area/security/prison)
 "uWH" = (
