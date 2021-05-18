@@ -352,6 +352,7 @@
 			CLAN_NOSFERATU,
 			CLAN_TREMERE,
 			CLAN_VENTRUE,
+			CLAN_GIOVANNI,
 			)
 		AssignRandomBane(my_clan)
 	to_chat(owner.current, "<span class='notice'>You are now a rank [bloodsucker_level] Bloodsucker. Your strength, health, feed rate, regen rate, and maximum blood capacity have all increased!</span>")
