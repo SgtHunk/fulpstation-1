@@ -90,4 +90,9 @@
 				* As part of the Ventrue Clan, you are extremely snobby with your meals, and refuse to drink blood from people without a Mind.</span>")
 		if(CLAN_GIOVANNI)
 			to_chat(owner, "<span class='announce'>You have Ranked up enough to learn: You are part of the Giovanni Clan!<br> \
-				* As part of the Giovanni Clan, your bites are unforgiving and loud, causing screams even in an attempt to be silenced and violently spraying blood if interrupted.</span>")
+				* As part of the Giovanni Clan, your bites are unforgiving and loud, causing screams even in an attempt to be silent and violently spraying blood if interrupted.</span>")
+		if(CLAN_MALKAVIAN)
+			var/mob/living/carbon/human/bloodsucker = owner.current
+			bloodsucker.gain_trauma(/datum/brain_trauma/mild/hallucinations, TRAUMA_RESILIENCE_ABSOLUTE)
+			to_chat(owner, "<span class='announce'>You have Ranked up enough to learn: You are part of the Malkavian Clan!<br> \
+				* As part of the Malkavian Clan, you see the world in a different way, suffering hallucinations.</span>")
