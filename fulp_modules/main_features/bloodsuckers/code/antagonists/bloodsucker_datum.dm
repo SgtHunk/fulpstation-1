@@ -769,6 +769,65 @@
 
 	return fullname
 
+/// Special midround/latejoin only bloodsucker - used to override procs accordingly.
+/datum/antagonist/bloodsucker/tzimisce
+	name = "Tzimisce Bloodsucker"
+
+/datum/antagonist/bloodsucker/tzimisce/on_gain()
+	forge_bloodsucker_objectives()
+	/// Start Sunlight if first Bloodsucker
+	clan.check_start_sunlight()
+	AssignStarterPowersAndStats()
+	/// Name & Title
+	SelectFirstName()
+	// Assigns us to the Tzimisce Clan!
+	AssignClanAndBane()
+	/// We're no fledglings!
+	SelectTitle(am_fledgling = FALSE)
+	SelectReputation(am_fledgling = FALSE)
+	update_bloodsucker_icons_added(owner.current, "bloodsucker")
+	..()
+
+/datum/antagonist/bloodsucker/tzimisce/forge_bloodsucker_objectives() // Flesh, flesh! Shape the flesh!
+
+	// Lair Objective
+	var/datum/objective/bloodsucker/lair/lair_objective = new
+	lair_objective.owner = owner
+	lair_objective.generate_objective()
+	add_objective(lair_objective)
+
+	// Protege Objective
+	var/datum/objective/bloodsucker/protege/tzimisce/make_flesh_monsters_objective = new
+	make_flesh_monsters_objective.owner = owner
+	make_flesh_monsters_objective.generate_objective()
+	add_objective(make_flesh_monsters_objective)
+
+	switch(rand(0,1))
+		if(0) // Heart Thief Objective
+			var/datum/objective/bloodsucker/heartthief/heartthief_objective = new
+			heartthief_objective.owner = owner
+			heartthief_objective.generate_objective()
+			add_objective(heartthief_objective)
+		if(1) // Vassalize Target Objective
+			var/datum/objective/bloodsucker/vassalhim/vassalhim_objective = new
+			vassalhim_objective.owner = owner
+			vassalhim_objective.find_target()
+			add_objective(vassalhim_objective)
+
+	// Survive Objective
+	var/datum/objective/bloodsucker/survive/survive_objective = new
+	survive_objective.owner = owner
+	survive_objective.generate_objective()
+	add_objective(survive_objective)
+
+/datum/antagonist/bloodsucker/tzimisce/AssignClanAndBane()
+	if(my_clan) // Bloodsuckers are normally assigned to a clan at level 3 - but we already have a clan on_gain() so return.
+		return
+	my_clan = CLAN_TZIMISCE
+	to_chat(owner, "<span class='announce'>You are part of the Tzimisce Clan!<br> \
+		* As part of the Tzimisce Clan, you are a shapeshifter of flesh - able to sculpt living beings into wicked creations on the persuasion rack. \
+		* However, you are unable to properly sleep in a coffin that isn't claimed by you.</span>")
+
 /////////////////////////////////////
 		// HUD! //
 /////////////////////////////////////

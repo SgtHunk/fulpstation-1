@@ -309,6 +309,8 @@
 	var/datum/antagonist/bloodsucker/bloodsuckerdatum = owner.current.mind.has_antag_datum(/datum/antagonist/bloodsucker)
 	return !bloodsuckerdatum.AmFinalDeath
 
+/datum/objective/bloodsucker/protege/tzimisce
+
 //////////////////////////////////////////////////////////////////////////////////////
 
 /datum/objective/bloodsucker/monsterhunter

@@ -54,13 +54,18 @@
 #define CLAN_VENTRUE "Ventrue Clan"
 /// Constant hallucinations & Bluespace Prophet traumas - Beefmen cannot join this.
 #define CLAN_MALKAVIAN "Malkavian Clan"
+/// Masters in shapeshifting and crafting creatures from flesh - forced to sleep in their claimed coffin ("Grounded").
+#define CLAN_TZIMISCE "Tzimisce Clan"
 /* Clan defines
 */
 #define TREMERE_SKELETON "Skeleton Pirate"
 #define TREMERE_ZOMBIE "Zombie - Revives"
 #define TREMERE_HUSK "Husk - Drinks all their Blood"
 #define TREMERE_BAT "Bat - Chance to give them Bat form"
-
+#define TZIMISCE_ACROBAT "Fast two-legged monster (150 Blood)"
+#define TZIMISCE_CLAWMONSTER "Clawed monster (250 Blood)"
+#define TZIMISCE_HUSK "Husk (100 Blood)"
+#define TZIMISCE_TRIPLECHESTED "Triple-chested abomination (300 Blood)"
 /*
  *	Deputy Defines
  */

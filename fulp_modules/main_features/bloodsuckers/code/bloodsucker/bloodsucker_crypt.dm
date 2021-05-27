@@ -122,6 +122,10 @@
 			. += {"<span class='cult'>As part of the Ventrue Clan, you can choose a Favorite Vassal.</span>"}
 			. += {"<span class='cult'>Click the Rack as a Vassal is buckled onto it to turn them into your Favorite. This can only be done once, so choose carefully!</span>"}
 			. += {"<span class='cult'>This process costs 150 Blood to do, and will make your Vassal unable to be deconverted, outside of you reaching FinalDeath.</span>"}
+		if(bloodsuckerdatum.my_clan == CLAN_TZIMISCE)
+			. += {"<span class='cult'>As part of the Tzimisce Clan, you can mutilate people into flesh monsters that do your bidding.</span>"}
+			. += {"<span class='cult'>Click the Rack as a person is buckled onto it to begin shifting them into something greater.</span>"}
+			. += {"<span class='cult'>This process costs blood depending on which monster you decide to create - choose carefully.</span>"}
 	if(IS_VASSAL(user))
 		. += "<span class='notice'>This is the vassal rack, which allows your master to thrall crewmembers into their minions.</span>"
 		. += "<span class='notice'>Aid your master in bringing their victims here and keeping them secure.</span>"
@@ -303,6 +307,13 @@
 		/// Not Tremere & They're still our Vassal, let's unbuckle them.
 		unbuckle_mob(C)
 		useLock = FALSE
+		return
+	/// TZIMISCE CHECK - TRANSFORM THEM INTO WICKED MONSTERS!
+	if(B.my_clan == CLAN_TZIMISCE)
+		if(istype(V) && V.mutilated)
+			to_chat(user, "<span class='notice'>You've already shapeshifted [C]!</span>")
+			return
+		shapeshift_victim(user, C)
 		return
 	/// Not our Vassal & We're a Bloodsucker, good to go!
 	torture_victim(user, C)
@@ -601,6 +612,118 @@
 			useLock = FALSE
 			return
 
+
+/obj/structure/bloodsucker/vassalrack/proc/shapeshift_victim(mob/living/user, mob/living/target)
+	var/datum/antagonist/bloodsucker/bloodsuckerdatum = user.mind.has_antag_datum(/datum/antagonist/bloodsucker)
+	var/datum/antagonist/vassal/vassaldatum = target.mind.has_antag_datum(/datum/antagonist/vassal)
+	/// To deal with Blood
+	var/mob/living/carbon/human/C = user
+	var/mob/living/carbon/human/H = target
+
+	/// Dead? No worries! Shift them into one of our creations!
+	if(H.stat == DEAD)
+		to_chat(user, "<span class='notice'>Do you wish to rebuild this body? This will remove any restraints they might have, and will cost 75 Blood!</span>")
+		var/list/revive_options = list(
+			"Yes" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_yes"),
+			"No" = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_no")
+			)
+		var/revive_response = show_radial_menu(user, src, revive_options, radius = 36, require_near = TRUE)
+		switch(revive_response)
+			if("Yes")
+				if(prob(15))
+					to_chat(user, "<span class='danger'>Something has gone terribly wrong! You have accidentally turned [target] into a High-Functioning Zombie!</span>")
+					to_chat(target, "<span class='announce'>As Blood drips over your body, your heart fails to beat... But you still wake up.</span>")
+					H.set_species(/datum/species/zombie)
+				else
+					to_chat(user, "<span class='danger'>You have brought [target] back from the Dead!</span>")
+					to_chat(target, "<span class='announce'>As Blood drips over your body, your heart begins to beat... You live again!</span>")
+				C.blood_volume -= 75
+				target.revive(full_heal = TRUE, admin_revive = TRUE)
+				return
+			else
+				to_chat(user, "<span class='danger'>You decide not to revive [target].</span>")
+				/// Unbuckle them now.
+				unbuckle_mob(C)
+				useLock = FALSE
+				return
+
+	var/static/list/races = list(
+		TZIMISCE_ACROBAT,
+		TZIMISCE_CLAWMONSTER,
+		TZIMISCE_HUSK,
+		TZIMISCE_TRIPLECHESTED,
+	)
+	var/list/options = list()
+	options = races
+	var/answer = tgui_input_list(user, "We have the chance to shapeshift our victim into something greater, how should we mutilate their corpse?", "What do we do with our victim?", options)
+	if(!do_mob(user, src, 20 SECONDS))
+		to_chat(user, "<span class='danger'><i>The ritual has been interrupted!</i></span>")
+		return
+	switch(answer)
+		if(TZIMISCE_ACROBAT)
+			to_chat(user, "<span class='notice'>You have shaped [target] into a two-legged monster!</span>")
+			to_chat(target, "<span class='notice'>Your master has made you into a monster!</span>")
+			/// Strip them naked - From gohome.dm
+			C.blood_volume -= 150
+			var/list/items = list()
+			items |= target.get_equipped_items()
+			for(var/I in items)
+				target.dropItemToGround(I,TRUE)
+			for(var/obj/item/I in target.held_items)
+				target.dropItemToGround(I, TRUE)
+			/// Now give them their other stuff
+			H.set_species(/datum/species/skeleton)
+			H.equipOutfit(/datum/outfit/pirate)
+			remove_loyalties(target)
+			bloodsuckerdatum.attempt_turn_vassal(target)
+			vassaldatum.mutilated = TRUE
+
+			return
+		if(TZIMISCE_CLAWMONSTER)
+			to_chat(user, "<span class='notice'>You have mutated [target] into a High-Functioning Zombie, fully healing them in the process!</span>")
+			to_chat(target, "<span class='notice'>Your master has mutated you into a High-Functioning Zombie!</span>")
+			target.revive(full_heal = TRUE, admin_revive = TRUE)
+			C.blood_volume -= 250
+			H.set_species(/datum/species/zombie)
+			remove_loyalties(target)
+			bloodsuckerdatum.attempt_turn_vassal(target)
+			vassaldatum.mutilated = TRUE
+			return
+		/// Quick Feeding
+		if(TZIMISCE_HUSK)
+			to_chat(user, "<span class='notice'>You suck all the blood out of [target], turning them into a Living Husk!</span>")
+			to_chat(target, "<span class='notice'>Your master has mutated you into a Living Husk!</span>")
+			/// Cheap shapeshifting - but not effective.
+			C.blood_volume -= 100
+			ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
+			H.become_husk()
+			remove_loyalties(target)
+			bloodsuckerdatum.attempt_turn_vassal(target)
+			vassaldatum.mutilated = TRUE
+			return
+		/// Chance to give Bat form, or turn them into a bat.
+		if(TZIMISCE_TRIPLECHESTED)
+			/// Ooh, lucky!
+			C.blood_volume -= 300
+			remove_loyalties(target)
+			bloodsuckerdatum.attempt_turn_vassal(target)
+			vassaldatum.mutilated = TRUE
+			if(prob(40))
+				to_chat(user, "<span class='notice'>You have mutated [target], giving them the ability to turn into a Bat and back at will!</span>")
+				to_chat(target, "<span class='notice'>Your master has mutated you, giving you the ability to turn into a Bat and back at will!</span>")
+				var/obj/effect/proc_holder/spell/targeted/shapeshift/bat/batform = new
+				target.AddSpell(batform)
+				return
+			else
+				to_chat(user, "<span class='notice'>You have failed to mutate [target] into a Bat, forever trapping them into Bat form!</span>")
+				to_chat(target, "<span class='notice'>Your master has mutated you into a Bat!</span>")
+				var/mob/living/simple_animal/hostile/retaliate/bat/battransformation = new /mob/living/simple_animal/hostile/retaliate/bat(target.loc)
+				target.mind.transfer_to(battransformation)
+				qdel(target)
+				return
+		else
+			to_chat(user, "<span class='notice'>You decide to leave your victim just the way they are.</span>")
+			return
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
