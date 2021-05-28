@@ -774,19 +774,15 @@
 	name = "Tzimisce Bloodsucker"
 
 /datum/antagonist/bloodsucker/tzimisce/on_gain()
-	forge_bloodsucker_objectives()
-	/// Start Sunlight if first Bloodsucker
-	clan.check_start_sunlight()
-	AssignStarterPowersAndStats()
-	/// Name & Title
-	SelectFirstName()
-	// Assigns us to the Tzimisce Clan!
+	. = ..()
+	update_bloodsucker_icons_added(owner.current, "tzimisce")
 	AssignClanAndBane()
-	/// We're no fledglings!
-	SelectTitle(am_fledgling = FALSE)
-	SelectReputation(am_fledgling = FALSE)
-	update_bloodsucker_icons_added(owner.current, "bloodsucker")
-	..()
+
+/datum/antagonist/bloodsucker/tzimisce/update_bloodsucker_icons_added(datum/mind/m)
+	var/datum/atom_hud/antag/vamphud = GLOB.huds[ANTAG_HUD_BLOODSUCKER]
+	vamphud.join_hud(owner.current)
+	set_antag_hud(owner.current, "bloodsucker")
+	owner.current.hud_list[ANTAG_HUD].icon = image('fulp_modules/main_features/bloodsuckers/icons/bloodsucker_icons.dmi', owner.current, "tzimisce") // FULP ADDITION! Check prepare_huds in mob.dm to see why.
 
 /datum/antagonist/bloodsucker/tzimisce/forge_bloodsucker_objectives() // Flesh, flesh! Shape the flesh!
 
@@ -797,7 +793,7 @@
 	add_objective(lair_objective)
 
 	// Protege Objective
-	var/datum/objective/bloodsucker/protege/tzimisce/make_flesh_monsters_objective = new
+	var/datum/objective/bloodsucker/protege/make_flesh_monsters_objective = new
 	make_flesh_monsters_objective.owner = owner
 	make_flesh_monsters_objective.generate_objective()
 	add_objective(make_flesh_monsters_objective)
