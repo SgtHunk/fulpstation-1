@@ -629,8 +629,8 @@
 		var/revive_response = show_radial_menu(user, src, revive_options, radius = 36, require_near = TRUE)
 		switch(revive_response)
 			if("Yes")
-					to_chat(user, "<span class='danger'>You have brought [target] back from the Dead!</span>")
-					to_chat(target, "<span class='announce'>As Blood drips over your body, your heart begins to beat... You live again!</span>")
+				to_chat(user, "<span class='danger'>You have brought [target] back from the Dead!</span>")
+				to_chat(target, "<span class='announce'>As Blood drips over your body, your heart begins to beat... You live again!</span>")
 				C.blood_volume -= 150
 				target.revive(full_heal = TRUE, admin_revive = TRUE)
 				ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
@@ -655,10 +655,31 @@
 	if(!do_mob(user, src, 20 SECONDS))
 		to_chat(user, "<span class='danger'><i>The ritual has been interrupted!</i></span>")
 		return
+
+	/* TODO: Rework this to follow a better logic instead of being copy-paste. eg:
+	/// The monster the target is being transferred to upon succesful ritual.
+	var/mob/living/simple_animal/monster
+	/// The amount of blood lost by the Tzimisce upon succesfully shapeshifting the target.
+	var/blood_lost = 100
+	/// Do we lose items upon succesful rituals? Only FALSE for husks as they do not become simplemobs.
+	var/lose_items = TRUE
+	*/
 	switch(answer)
+		/// Tzimisce can have a little human vassal. As a treat.
+		if(TZIMISCE_HUSK)
+			to_chat(user, "<span class='notice'>You begin morphing [target]'s body, turning [target.p_them()] into a Living Husk!</span>")
+			to_chat(target, "<span class='notice'>You've been turned into a Living Husk!</span>")
+			/// Cheap shapeshifting - but not effective.
+			C.blood_volume -= 100
+			ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
+			H.become_husk()
+			bloodsuckerdatum.attempt_turn_vassal(target)
+			return
+
+		/// Fast monsters - not much HP. Can ventcrawl. Nosferatu's doom.
 		if(TZIMISCE_ACROBAT)
 			to_chat(user, "<span class='notice'>You have shaped [target] into a two-armed monster!</span>")
-			to_chat(target, "<span class='notice'>Your master has made you into a monster!</span>")
+			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
 			C.blood_volume -= 150
 			var/list/items = list()
 			items |= target.get_equipped_items()
@@ -671,9 +692,11 @@
 			target.mind.transfer_to(acrobat)
 			qdel(target)
 			return
+
+		/// Slow, glutton-ish. Launch a slowing projectile on Right click?
 		if(TZIMISCE_CLAWMONSTER)
-			to_chat(user, "<span class='notice'>You have mutated [target] into a High-Functioning Zombie, fully healing them in the process!</span>")
-			to_chat(target, "<span class='notice'>Your master has mutated you into a High-Functioning Zombie!</span>")
+			to_chat(user, "<span class='notice'>You have shaped [target] into a gluttonous, clawed monster!</span>")
+			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
 			C.blood_volume -= 250
 			var/list/items = list()
 			items |= target.get_equipped_items()
@@ -686,20 +709,11 @@
 			target.mind.transfer_to(clawmonster)
 			qdel(target)
 			return
-		/// Quick Feeding
-		if(TZIMISCE_HUSK)
-			to_chat(user, "<span class='notice'>You suck all the blood out of [target], turning them into a Living Husk!</span>")
-			to_chat(target, "<span class='notice'>Your master has mutated you into a Living Husk!</span>")
-			/// Cheap shapeshifting - but not effective.
-			C.blood_volume -= 100
-			ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
-			H.become_husk()
-			bloodsuckerdatum.attempt_turn_vassal(target)
-			return
-		/// Chance to give Bat form, or turn them into a bat.
+
+		/// Slower than claw monsters, can move in No-Gravity. Best used as the equivalent of tarantulas (sentinels).
 		if(TZIMISCE_TRIPLECHESTED)
 			to_chat(user, "<span class='notice'>You have shaped [target] into a triple-chested, bulky monster!</span>")
-			to_chat(target, "<span class='notice'>Your master has made you into a monster!</span>")
+			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
 			C.blood_volume -= 300
 			var/list/items = list()
 			items |= target.get_equipped_items()

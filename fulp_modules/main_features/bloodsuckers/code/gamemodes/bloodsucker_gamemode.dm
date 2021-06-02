@@ -142,7 +142,7 @@
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/midround/tzimisce_bloodsucker
-	name = "Vampiric Accident"
+	name = "Sabbat Awakening"
 	antag_datum = /datum/antagonist/bloodsucker/tzimisce
 	antag_flag = ROLE_BLOODSUCKER
 	protected_roles = list("Captain", "Head of Personnel", "Head of Security", "Research Director", "Chief Engineer", "Chief Medical Officer", "Quartermaster", "Warden", "Security Officer", "Detective", "Brig Physician", "Deputy",)
@@ -151,7 +151,6 @@
 	weight = 8
 	cost = 10
 	requirements = list(40,30,20,10,10,10,10,10,10,10)
-	/// We should preferably not just have several Bloodsucker midrounds, as they are nerfed hard due to missing Sols.
 	repeatable = FALSE
 
 /datum/dynamic_ruleset/midround/tzimisce_bloodsucker/acceptable(population = 0, threat = 0)
@@ -188,15 +187,16 @@
 	var/mob/M = pick(living_players)
 	assigned += M.mind
 	living_players -= M.mind
-	var/datum/antagonist/bloodsucker/tzimisce/sabbat = new
+	var/datum/antagonist/bloodsucker/sabbat = new
 	M.mind.add_antag_datum(sabbat)
 	sabbat.bloodsucker_level_unspent = rand(3,4)
+	sabbat.AssignClanAndBane(is_tzimisce = TRUE)
 	message_admins("[ADMIN_LOOKUPFLW(M)] was selected by the [name] ruleset and has been made into a midround Tzimisce Bloodsucker.")
 	log_game("DYNAMIC: [key_name(M)] was selected by the [name] ruleset and has been made into a midround Tzimisce Bloodsucker.")
 	return TRUE
 
 /datum/dynamic_ruleset/latejoin/tzimisce_bloodsucker
-	name = "Bloodsucker Breakout"
+	name = "Tzimisce Arrival"
 	antag_datum = /datum/antagonist/bloodsucker/tzimisce
 	antag_flag = ROLE_BLOODSUCKER
 	protected_roles = list("Captain", "Head of Personnel", "Head of Security", "Research Director", "Chief Engineer", "Chief Medical Officer", "Quartermaster", "Warden", "Security Officer", "Detective", "Brig Physician", "Deputy",)
@@ -211,9 +211,10 @@
 /datum/dynamic_ruleset/latejoin/tzimisce_bloodsucker/execute()
 	var/mob/M = pick(candidates) // This should contain a single player, but in case.
 	assigned += M.mind
-	var/datum/antagonist/bloodsucker/tzimisce/sabbat = new
+	var/datum/antagonist/bloodsucker/sabbat = new
 	M.mind.add_antag_datum(sabbat)
 	sabbat.bloodsucker_level_unspent = rand(3,4)
+	sabbat.AssignClanAndBane(is_tzimisce = TRUE)
 	message_admins("[ADMIN_LOOKUPFLW(M)] was selected by the [name] ruleset and has been made into a latejoin Tzimisce Bloodsucker.")
 	log_game("DYNAMIC: [key_name(M)] was selected by the [name] ruleset and has been made into a latejoin Tzimisce Bloodsucker.")
 	return TRUE

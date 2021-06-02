@@ -816,13 +816,6 @@
 	survive_objective.generate_objective()
 	add_objective(survive_objective)
 
-/datum/antagonist/bloodsucker/tzimisce/AssignClanAndBane()
-	if(my_clan) // Bloodsuckers are normally assigned to a clan at level 3 - but we already have a clan on_gain() so return.
-		return
-	my_clan = CLAN_TZIMISCE
-	to_chat(owner, "<span class='announce'>You are part of the Tzimisce Clan!<br> \
-		* As part of the Tzimisce Clan, you are a shapeshifter of flesh - able to sculpt living beings into wicked creations on the persuasion rack. \
-		* However, you are unable to properly sleep in a coffin that isn't claimed by you.</span>")
 
 /////////////////////////////////////
 		// HUD! //

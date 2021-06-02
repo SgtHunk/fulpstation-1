@@ -68,7 +68,7 @@
  */
 
 
-/datum/antagonist/bloodsucker/proc/AssignClanAndBane()
+/datum/antagonist/bloodsucker/proc/AssignClanAndBane(is_tzimisce = FALSE)
 	var/static/list/clans = list(
 		CLAN_BRUJAH,
 		CLAN_NOSFERATU,
@@ -79,6 +79,16 @@
 	var/list/options = list()
 	options = clans
 	var/mob/living/carbon/human/bloodsucker = owner.current
+	if(is_tzimisce)
+		my_clan = CLAN_TZIMISCE
+		to_chat(owner, "<span class='announce'>You are a fierce, powerful shapeshifter! You are Tzimisce!<br> \
+			* As part of the Tzimisce Clan, you are able to shapeshift your victims on a persuasion rack to turn them into monsters!<br> \
+			* Your bane has made you very vulnerable to stakes, and forced to remain in a static coffin - you are unable to sleep in unclaimed coffins.</span>")
+		/// TODO: MOVE A LOT OF STUFF HERE.
+		return
+	/// Clan already assigned? Then don't assign it again.
+	if(my_clan)
+		return
 	/// Beefmen can't be Malkavian, they already get all the side effects from it.
 	if(isbeefman(bloodsucker))
 		options -= CLAN_MALKAVIAN
