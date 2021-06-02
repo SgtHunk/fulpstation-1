@@ -656,79 +656,68 @@
 		to_chat(user, "<span class='danger'><i>The ritual has been interrupted!</i></span>")
 		return
 
-	/* TODO: Rework this to follow a better logic instead of being copy-paste. eg:
+	/// Are we making them into a monster?
+	var/make_monster = TRUE
 	/// The monster the target is being transferred to upon succesful ritual.
 	var/mob/living/simple_animal/monster
 	/// The amount of blood lost by the Tzimisce upon succesfully shapeshifting the target.
-	var/blood_lost = 100
+	var/blood_lost
 	/// Do we lose items upon succesful rituals? Only FALSE for husks as they do not become simplemobs.
 	var/lose_items = TRUE
-	*/
+
 	switch(answer)
 		/// Tzimisce can have a little human vassal. As a treat.
 		if(TZIMISCE_HUSK)
+			blood_lost = 100
+			lose_items = FALSE
+			make_monster = FALSE
 			to_chat(user, "<span class='notice'>You begin morphing [target]'s body, turning [target.p_them()] into a Living Husk!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a Living Husk!</span>")
 			/// Cheap shapeshifting - but not effective.
-			C.blood_volume -= 100
 			ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
-			H.become_husk()
-			bloodsuckerdatum.attempt_turn_vassal(target)
-			return
+			target.become_husk()
 
 		/// Fast monsters - not much HP. Can ventcrawl. Nosferatu's doom.
 		if(TZIMISCE_ACROBAT)
+			blood_lost = 150
+			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_acrobat
 			to_chat(user, "<span class='notice'>You have shaped [target] into a two-armed monster!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
-			C.blood_volume -= 150
-			var/list/items = list()
-			items |= target.get_equipped_items()
-			for(var/I in items)
-				target.dropItemToGround(I,TRUE)
-			for(var/obj/item/I in target.held_items)
-				target.dropItemToGround(I, TRUE)
-			bloodsuckerdatum.attempt_turn_vassal(target)
-			var/mob/living/simple_animal/hostile/retaliate/bat/acrobat = new /mob/living/simple_animal/hostile/retaliate/tzimisce_acrobat(target.loc)
-			target.mind.transfer_to(acrobat)
-			qdel(target)
-			return
 
 		/// Slow, glutton-ish. Launch a slowing projectile on Right click?
 		if(TZIMISCE_CLAWMONSTER)
+			blood_lost = 250
+			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_clawmonster
 			to_chat(user, "<span class='notice'>You have shaped [target] into a gluttonous, clawed monster!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
-			C.blood_volume -= 250
-			var/list/items = list()
-			items |= target.get_equipped_items()
-			for(var/I in items)
-				target.dropItemToGround(I,TRUE)
-			for(var/obj/item/I in target.held_items)
-				target.dropItemToGround(I, TRUE)
-			bloodsuckerdatum.attempt_turn_vassal(target)
-			var/mob/living/simple_animal/hostile/retaliate/bat/clawmonster = new /mob/living/simple_animal/hostile/retaliate/tzimisce_clawmonster(target.loc)
-			target.mind.transfer_to(clawmonster)
-			qdel(target)
-			return
 
 		/// Slower than claw monsters, can move in No-Gravity. Best used as the equivalent of tarantulas (sentinels).
 		if(TZIMISCE_TRIPLECHESTED)
+			blood_lost = 300
+			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_triplechested
 			to_chat(user, "<span class='notice'>You have shaped [target] into a triple-chested, bulky monster!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
-			C.blood_volume -= 300
-			var/list/items = list()
-			items |= target.get_equipped_items()
-			for(var/I in items)
-				target.dropItemToGround(I,TRUE)
-			for(var/obj/item/I in target.held_items)
-				target.dropItemToGround(I, TRUE)
-			bloodsuckerdatum.attempt_turn_vassal(target)
-			var/mob/living/simple_animal/hostile/retaliate/bat/triplechested = new /mob/living/simple_animal/hostile/retaliate/tzimisce_triplechested(target.loc)
-			target.mind.transfer_to(triplechested)
-			qdel(target)
-			return
+
+		/// Didn't choose? then don't do anything and return.
 		else
 			to_chat(user, "<span class='notice'>You decide to leave your victim just the way they are.</span>")
 			return
+
+	if(lose_items)
+		var/list/items = list()
+		items |= target.get_equipped_items()
+		for(var/I in items)
+			target.dropItemToGround(I,TRUE)
+		for(var/obj/item/I in target.held_items)
+			target.dropItemToGround(I, TRUE)
+	if(make_monster)
+		new monster(target.loc)
+		target.mind.transfer_to(monster)
+		qdel(target)
+	if(blood_lost)
+		C.blood_volume -= blood_lost
+	bloodsuckerdatum.attempt_turn_vassal(target)
+	return
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
