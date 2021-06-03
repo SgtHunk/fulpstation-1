@@ -87,7 +87,7 @@
 		/// TODO: MOVE A LOT OF STUFF HERE.
 		return
 	/// Clan already assigned? Then don't assign it again.
-	if(my_clan)
+	if(my_clan != null)
 		return
 	/// Beefmen can't be Malkavian, they already get all the side effects from it.
 	if(isbeefman(bloodsucker))

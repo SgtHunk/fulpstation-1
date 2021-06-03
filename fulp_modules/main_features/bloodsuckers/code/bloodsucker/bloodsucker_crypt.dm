@@ -645,7 +645,7 @@
 
 	var/static/list/monster_choices = list(
 		TZIMISCE_HUSK,
-		TZIMISCE_ACROBAT,
+		TZIMISCE_TWOARMED,
 		TZIMISCE_CLAWMONSTER,
 		TZIMISCE_TRIPLECHESTED,
 	)
@@ -661,6 +661,10 @@
 	var/blood_lost
 	/// Do we lose items upon succesful rituals? Only FALSE for husks as they do not become simplemobs.
 	var/lose_items = TRUE
+	/// The message that the Tzimisce gets upon a successful ritual.
+	var/user_message = "You have shaped [target] into a two-armed monster!"
+	/// The message that the victim gets upon a succesful ritual.
+	var/target_message = "You've been turned into a monster!"
 
 	/// Didn't choose? then don't do anything and return.
 	if(!answer)
@@ -673,32 +677,28 @@
 			blood_lost = -200
 			lose_items = FALSE
 			make_monster = FALSE
-			to_chat(user, "<span class='notice'>You begin morphing [target]'s body, turning [target.p_them()] into a Living Husk!</span>")
-			to_chat(target, "<span class='notice'>You've been turned into a Living Husk!</span>")
+			user_message = "You grotesquely shape [target]'s body, turning [target.p_them()] into a Living Husk!"
+			target_message =  "You've been turned into a Living Husk!"
 			/// Cheap shapeshifting - but not effective.
 			ADD_TRAIT(target, TRAIT_MUTE, BLOODSUCKER_TRAIT)
 			target.become_husk()
 
 		/// Fast monsters - not much HP. Can ventcrawl. Nosferatu's doom.
-		if(TZIMISCE_ACROBAT)
+		if(TZIMISCE_TWOARMED)
 			blood_lost = 100
-			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_acrobat
-			to_chat(user, "<span class='notice'>You have shaped [target] into a two-armed monster!</span>")
-			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
+			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_twoarmed
 
 		/// Slow, glutton-ish. Launch a slowing projectile on Right click?
 		if(TZIMISCE_CLAWMONSTER)
 			blood_lost = 250
 			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_clawmonster
-			to_chat(user, "<span class='notice'>You have shaped [target] into a gluttonous, clawed monster!</span>")
-			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
+			user_message = "You have shaped [target] into a gluttonous, clawed monster!"
 
 		/// Slower than claw monsters, can move in No-Gravity. Best used as the equivalent of tarantulas (sentinels).
 		if(TZIMISCE_TRIPLECHESTED)
 			blood_lost = 300
 			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_triplechested
-			to_chat(user, "<span class='notice'>You have shaped [target] into a triple-chested, bulky monster!</span>")
-			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
+			user_message = "You have shaped [target] into a triple-chested, bulky monster!"
 
 	INVOKE_ASYNC(target, /mob.proc/emote, "scream")
 	if(!do_mob(user, src, 20 SECONDS))
@@ -706,6 +706,8 @@
 		return
 
 	bloodsuckerdatum.attempt_turn_vassal(target)
+	to_chat(user, "<span class'notice'>[user_message]</span>")
+	to_chat(target, "<span class='notice'>[target_message]</span>")
 	if(lose_items)
 		var/list/items = list()
 		items |= target.get_equipped_items()

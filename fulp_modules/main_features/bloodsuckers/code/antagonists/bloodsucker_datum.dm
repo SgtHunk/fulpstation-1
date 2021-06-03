@@ -769,53 +769,6 @@
 
 	return fullname
 
-/// Special midround/latejoin only bloodsucker - used to override procs accordingly.
-/datum/antagonist/bloodsucker/tzimisce
-	name = "Tzimisce Bloodsucker"
-
-/datum/antagonist/bloodsucker/tzimisce/on_gain()
-	. = ..()
-	update_bloodsucker_icons_added(owner.current, "tzimisce")
-	AssignClanAndBane()
-
-/datum/antagonist/bloodsucker/tzimisce/update_bloodsucker_icons_added(datum/mind/m)
-	var/datum/atom_hud/antag/vamphud = GLOB.huds[ANTAG_HUD_BLOODSUCKER]
-	vamphud.join_hud(owner.current)
-	set_antag_hud(owner.current, "bloodsucker")
-	owner.current.hud_list[ANTAG_HUD].icon = image('fulp_modules/main_features/bloodsuckers/icons/bloodsucker_icons.dmi', owner.current, "tzimisce") // FULP ADDITION! Check prepare_huds in mob.dm to see why.
-
-/datum/antagonist/bloodsucker/tzimisce/forge_bloodsucker_objectives() // Flesh, flesh! Shape the flesh!
-
-	// Lair Objective
-	var/datum/objective/bloodsucker/lair/lair_objective = new
-	lair_objective.owner = owner
-	lair_objective.generate_objective()
-	add_objective(lair_objective)
-
-	// Protege Objective
-	var/datum/objective/bloodsucker/protege/make_flesh_monsters_objective = new
-	make_flesh_monsters_objective.owner = owner
-	make_flesh_monsters_objective.generate_objective()
-	add_objective(make_flesh_monsters_objective)
-
-	switch(rand(0,1))
-		if(0) // Heart Thief Objective
-			var/datum/objective/bloodsucker/heartthief/heartthief_objective = new
-			heartthief_objective.owner = owner
-			heartthief_objective.generate_objective()
-			add_objective(heartthief_objective)
-		if(1) // Vassalize Target Objective
-			var/datum/objective/bloodsucker/vassalhim/vassalhim_objective = new
-			vassalhim_objective.owner = owner
-			vassalhim_objective.find_target()
-			add_objective(vassalhim_objective)
-
-	// Survive Objective
-	var/datum/objective/bloodsucker/survive/survive_objective = new
-	survive_objective.owner = owner
-	survive_objective.generate_objective()
-	add_objective(survive_objective)
-
 
 /////////////////////////////////////
 		// HUD! //

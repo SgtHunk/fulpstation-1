@@ -62,9 +62,9 @@
 #define TREMERE_ZOMBIE "Zombie - Revives"
 #define TREMERE_HUSK "Husk - Drinks all their Blood"
 #define TREMERE_BAT "Bat - Chance to give them Bat form"
-#define TZIMISCE_ACROBAT "Fast two-legged monster (150 Blood)"
+#define TZIMISCE_TWOARMED "Fast two-armed monster (150 Blood)"
 #define TZIMISCE_CLAWMONSTER "Clawed monster (250 Blood)"
-#define TZIMISCE_HUSK "Husk (100 Blood)"
+#define TZIMISCE_HUSK "Husk (+200 Blood)"
 #define TZIMISCE_TRIPLECHESTED "Triple-chested abomination (300 Blood)"
 /*
  *	Deputy Defines
