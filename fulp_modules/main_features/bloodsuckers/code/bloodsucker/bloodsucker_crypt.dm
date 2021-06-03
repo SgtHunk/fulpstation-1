@@ -310,7 +310,7 @@
 		return
 	/// TZIMISCE CHECK - TRANSFORM THEM INTO WICKED MONSTERS!
 	if(B.my_clan == CLAN_TZIMISCE)
-		if(istype(V) && V.mutilated)
+		if(istype(V))
 			to_chat(user, "<span class='notice'>You've already shapeshifted [C]!</span>")
 			return
 		shapeshift_victim(user, C)
@@ -643,18 +643,15 @@
 				useLock = FALSE
 				return
 
-	var/static/list/races = list(
+	var/static/list/monster_choices = list(
+		TZIMISCE_HUSK,
 		TZIMISCE_ACROBAT,
 		TZIMISCE_CLAWMONSTER,
-		TZIMISCE_HUSK,
 		TZIMISCE_TRIPLECHESTED,
 	)
 	var/list/options = list()
-	options = races
+	options = monster_choices
 	var/answer = tgui_input_list(user, "We have the chance to shapeshift our victim into something greater, how should we mutilate their corpse?", "What do we do with our victim?", options)
-	if(!do_mob(user, src, 20 SECONDS))
-		to_chat(user, "<span class='danger'><i>The ritual has been interrupted!</i></span>")
-		return
 
 	/// Are we making them into a monster?
 	var/make_monster = TRUE
@@ -665,10 +662,15 @@
 	/// Do we lose items upon succesful rituals? Only FALSE for husks as they do not become simplemobs.
 	var/lose_items = TRUE
 
+	/// Didn't choose? then don't do anything and return.
+	if(!answer)
+		to_chat(user, "<span class='notice'>You decide to leave your victim just the way they are.</span>")
+		return
+
 	switch(answer)
 		/// Tzimisce can have a little human vassal. As a treat.
 		if(TZIMISCE_HUSK)
-			blood_lost = 100
+			blood_lost = -200
 			lose_items = FALSE
 			make_monster = FALSE
 			to_chat(user, "<span class='notice'>You begin morphing [target]'s body, turning [target.p_them()] into a Living Husk!</span>")
@@ -679,7 +681,7 @@
 
 		/// Fast monsters - not much HP. Can ventcrawl. Nosferatu's doom.
 		if(TZIMISCE_ACROBAT)
-			blood_lost = 150
+			blood_lost = 100
 			monster = /mob/living/simple_animal/hostile/retaliate/tzimisce_acrobat
 			to_chat(user, "<span class='notice'>You have shaped [target] into a two-armed monster!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
@@ -698,11 +700,12 @@
 			to_chat(user, "<span class='notice'>You have shaped [target] into a triple-chested, bulky monster!</span>")
 			to_chat(target, "<span class='notice'>You've been turned into a monster!</span>")
 
-		/// Didn't choose? then don't do anything and return.
-		else
-			to_chat(user, "<span class='notice'>You decide to leave your victim just the way they are.</span>")
-			return
+	INVOKE_ASYNC(target, /mob.proc/emote, "scream")
+	if(!do_mob(user, src, 20 SECONDS))
+		to_chat(user, "<span class='danger'><i>The ritual has been interrupted!</i></span>")
+		return
 
+	bloodsuckerdatum.attempt_turn_vassal(target)
 	if(lose_items)
 		var/list/items = list()
 		items |= target.get_equipped_items()
@@ -710,13 +713,13 @@
 			target.dropItemToGround(I,TRUE)
 		for(var/obj/item/I in target.held_items)
 			target.dropItemToGround(I, TRUE)
-	if(make_monster)
-		new monster(target.loc)
-		target.mind.transfer_to(monster)
+	if(make_monster && monster)
+		var/mob/living/simple_animal/new_body = new monster(target.loc)
+		target.mind.transfer_to(new_body)
+		new /obj/effect/gibspawner/human(target.loc)
 		qdel(target)
 	if(blood_lost)
 		C.blood_volume -= blood_lost
-	bloodsuckerdatum.attempt_turn_vassal(target)
 	return
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
