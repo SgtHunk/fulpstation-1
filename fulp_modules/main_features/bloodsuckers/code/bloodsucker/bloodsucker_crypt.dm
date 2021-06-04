@@ -659,6 +659,8 @@
 	var/mob/living/simple_animal/monster
 	/// The amount of blood lost by the Tzimisce upon succesfully shapeshifting the target.
 	var/blood_lost
+	/// The amount of blood gained by the Tzimisce upon a successful shapeshift.
+	var/blood_gained
 	/// Do we lose items upon succesful rituals? Only FALSE for husks as they do not become simplemobs.
 	var/lose_items = TRUE
 	/// The message that the Tzimisce gets upon a successful ritual.
@@ -674,7 +676,7 @@
 	switch(answer)
 		/// Tzimisce can have a little human vassal. As a treat.
 		if(TZIMISCE_HUSK)
-			blood_lost = -200
+			blood_gained = 200
 			lose_items = FALSE
 			make_monster = FALSE
 			user_message = "You grotesquely shape [target]'s body, turning [target.p_them()] into a Living Husk!"
@@ -720,6 +722,8 @@
 		target.mind.transfer_to(new_body)
 		new /obj/effect/gibspawner/human(target.loc)
 		qdel(target)
+	if(blood_gained)
+		C.blood_volume += blood_gained
 	if(blood_lost)
 		C.blood_volume -= blood_lost
 	return
