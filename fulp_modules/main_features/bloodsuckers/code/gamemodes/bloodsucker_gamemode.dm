@@ -143,7 +143,7 @@
 
 /datum/dynamic_ruleset/midround/tzimisce_bloodsucker
 	name = "Sabbat Awakening"
-	antag_datum = /datum/antagonist/bloodsucker/tzimisce
+	antag_datum = /datum/antagonist/bloodsucker
 	antag_flag = ROLE_BLOODSUCKER
 	protected_roles = list("Captain", "Head of Personnel", "Head of Security", "Research Director", "Chief Engineer", "Chief Medical Officer", "Quartermaster", "Warden", "Security Officer", "Detective", "Brig Physician", "Deputy",)
 	restricted_roles = list("AI","Cyborg", "Positronic Brain")
@@ -197,7 +197,7 @@
 
 /datum/dynamic_ruleset/latejoin/tzimisce_bloodsucker
 	name = "Tzimisce Arrival"
-	antag_datum = /datum/antagonist/bloodsucker/tzimisce
+	antag_datum = /datum/antagonist/bloodsucker
 	antag_flag = ROLE_BLOODSUCKER
 	protected_roles = list("Captain", "Head of Personnel", "Head of Security", "Research Director", "Chief Engineer", "Chief Medical Officer", "Quartermaster", "Warden", "Security Officer", "Detective", "Brig Physician", "Deputy",)
 	restricted_roles = list("AI","Cyborg")
